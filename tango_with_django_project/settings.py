@@ -25,7 +25,7 @@ SECRET_KEY = '#h(#$nf5#khvg=f(jjp7c3f_&@*7qa_+&xd$fn#htgr&)8fzr$'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
-
+test
 ALLOWED_HOSTS = []
 
 REGISTRATION_OPEN = True                # If True, users can register
