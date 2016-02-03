@@ -1,0 +1,14 @@
+{% extends 'rango/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About{% endblock %}
+
+{% block body_block %}
+
+    <h1>Rango says...</h1>
+    hello world! <strong>{{ boldmessage }}</strong><br />
+    <p> visits: {{ visits }}</p>
+    <a href="{% url 'index' %}">Home</a><br />
+
+{% endblock %}
