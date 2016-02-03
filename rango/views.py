@@ -6,6 +6,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from datetime import datetime
+from django.contrib.auth.models import User
+from django_messages.models import MessageManager, Message
 
 def index(request):
 
@@ -175,7 +177,8 @@ def user_login(request):
 
 @login_required
 def restricted(request):
-    return render(request, 'rango/restricted.html')
+    text = Message.objects.inbox_for(request.user)[0].body
+    return render(request, 'rango/restricted.html', {'text': text})
 
 @login_required
 def user_logout(request):
